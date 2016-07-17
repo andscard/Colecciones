@@ -30,7 +30,7 @@ public class SentimentAnalysis {
                 +"\n3. Econtras las palabras con el más alto/bajo puntaje"
                 +"\n4. Ordenar las palabras del acrchivo en ficheros positivas.txt y negativas.txt "
                 +"\n5. Salir del programa");
-        System.out.println("Escriba un número de 1 al 5: ");
+        System.out.println("\nEscriba un número de 1 al 5: ");
         
         
         String opcion=s.next();
@@ -42,7 +42,7 @@ public class SentimentAnalysis {
                   System.out.println("\n>> Escriba una palabra: ");
                   String word=keyboard.nextLine();
                   analizador.buscaPalabraMapa(word);
-                   break;
+                  break;
                case "2":
                   analizador.analisisArchivo();
                    break;
@@ -50,9 +50,11 @@ public class SentimentAnalysis {
                    analizador.palabraPositivaNegativa();
                    break;
                case "4":
-                   analizador.escribirArchivosSecundarios();
+                   analizador.escribirArchivoPositivo();
+                   analizador.escribirArchivoNegativo();
                    break;
                case "5":
+                   System.out.println("Fin del Programa");
                    return ;
                default:
                    System.out.println("Opción no válida");
