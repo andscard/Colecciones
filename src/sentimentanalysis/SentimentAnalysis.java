@@ -31,9 +31,9 @@ public class SentimentAnalysis {
        
         System.out.println("\n\n¿Qué desea hacer? "
                 +"\n1. Ontener el puntaje de una palabra"
-                +"\n2. Obtener el puntaje promedio de todas las palabras"
-                +"\n3. Econtras las palabras con el más alto/bajo puntaje"
-                +"\n4. Ordenar las palabras del acrchivo en ficheros positivas.txt y negativas.txt "
+                +"\n2. Obtener el puntaje promedio de palabras en un archivo "
+                +"\n3. Encontrar las palabras con el más alto/bajo puntaje en un archivo"
+                +"\n4. Ordenar las palabras de un archivo en ficheros positivas.txt y negativas.txt "
                 +"\n5. Salir del programa");
         System.out.println("\nEscriba un número de 1 al 5: ");
         
