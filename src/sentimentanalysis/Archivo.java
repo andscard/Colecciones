@@ -17,24 +17,27 @@ import java.util.Scanner;
  * @author User
  */
 public class Archivo {
+    private File userFile;
     private File reviewFile;
     private File f_positivo;
     private File f_negativo;
     
     
-    public Archivo (String file_name) {
-        this.reviewFile= new File(file_name);
+    public Archivo (String file_name) throws FileNotFoundException{
+        this.reviewFile=new File("movieReviews.txt");
         this.f_positivo=new File("positivo.txt");
         this.f_negativo=new File("negativo.txt");
+        this.userFile= new File(file_name);
+    }
+
+    public File getUserFile() {
+        return userFile;
     }
 
     public File getReviewFile() {
         return reviewFile;
     }
 
-    public void setReviewFile(File reviewFile) {
-        this.reviewFile = reviewFile;
-    }
 
     public File getF_positivo() {
         return f_positivo;
@@ -52,14 +55,19 @@ public class Archivo {
         this.f_negativo = f_negativo;
     }
     
-    public void crearArchivosSecundarios(){
+    public void crearArchivoPositivo(){
         try {
-            this.f_negativo.createNewFile();
             this.f_positivo.createNewFile();
         } catch (IOException exception) {
-            System.out.println("\nNo se pudieron crear los archivos");}
+            System.out.println("\nNo se pudo crear archivo positivo.txt");}
     }
-  
+    
+    public void crearArchivoNegativo(){
+     try {
+            this.f_negativo.createNewFile();
+        } catch (IOException exception) {
+            System.out.println("\nNo se pudo crear archivo negativo.txt");}
+    }
     
     
     
