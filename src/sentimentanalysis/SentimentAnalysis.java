@@ -23,7 +23,9 @@ public class SentimentAnalysis {
         System.out.println(">> Ingrese el nombre de un archivo: ");
         String file_name= keyboard.nextLine();
         Analizador analizador= new Analizador("movieReviews.txt");
-        
+       
+         while(true){
+       
         System.out.println("¿Qué desea hacer? "
                 +"\n1. Ontener el puntaje de una palabra"
                 +"\n2. Obtener el puntaje promedio de todas las palabras"
@@ -35,8 +37,16 @@ public class SentimentAnalysis {
         
         String opcion=s.next();
         
-        while(true){
-           
+        
+        SentimentAnalysis.submenu1(opcion, analizador);
+        
+        
+        }
+        
+        
+    }
+    public static void submenu1(String opcion, Analizador analizador){
+        Scanner keyboard = new Scanner(System.in);
            switch(opcion){
                case "1":
                   System.out.println("\n>> Escriba una palabra: ");
@@ -60,10 +70,6 @@ public class SentimentAnalysis {
                    System.out.println("Opción no válida");
                    break;
            }
-        
-        }
-        
-        
     }
     
 }
