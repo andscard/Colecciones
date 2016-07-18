@@ -169,8 +169,9 @@ public class Analizador {
                 bw2.newLine();
                 bw2.flush();
             }
+            System.out.println("Se creó exitosamente el archivo positivo.txt");
         } catch (IOException ex) {
-            System.out.println("No se puedo escribir en el archivo positivo.txt");
+            System.out.println("No se pudo escribir en el archivo positivo.txt");
         }
     }
     
@@ -186,14 +187,11 @@ public class Analizador {
                 bw1.newLine();
                 bw1.flush();
             }
-            
+           System.out.println("Se creó exitosamente el archivo negativo.txt"); 
         } catch (IOException ex) {
-         System.out.println("No se puedo escribir en el archivo negativo.txt");
+         System.out.println("No se pudo escribir en el archivo negativo.txt");
         }
     }
     
-    public void escribirArchivosSecundarios(){   
-        
-    
-    }
+ 
 }

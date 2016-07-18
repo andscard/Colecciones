@@ -80,7 +80,7 @@ public class Palabra implements Comparable<Palabra>{
     public void estadoPalabra (){
         System.out.println("La palabra: "+this.palabra+" aparece "+this.getFrecuencia()+" veces.");
         System.out.println("El puntaje promedio es : "+this.calculoPromedio());
-        System.out.println("Promedios: "+this.lista_promedio);
+        //System.out.println("Promedios: "+this.lista_promedio);
     }
     
     @Override
